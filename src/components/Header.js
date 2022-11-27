@@ -38,13 +38,17 @@ export default function Header() {
               height="19"
             />
           </button>
-          <ul className="header__List-Links">
+          <ul
+            className="header__List-Links"
+            aria-label="List from links navigation pages"
+          >
             <li className="header__Item-Link">
               <NavLink
                 to="/home"
                 className="header__Link"
                 rel="next"
                 target="_self"
+                aria-label="Page Home"
               >
                 00 Home
               </NavLink>
@@ -55,6 +59,7 @@ export default function Header() {
                 className="header__Link"
                 rel="next"
                 target="_self"
+                aria-label="Page Destination"
               >
                 01 Destination
               </NavLink>
@@ -65,6 +70,7 @@ export default function Header() {
                 className="header__Link"
                 rel="next"
                 target="_self"
+                aria-label="Page Crew"
               >
                 02 Crew
               </NavLink>
@@ -75,6 +81,7 @@ export default function Header() {
                 className="header__Link"
                 rel="next"
                 target="_self"
+                aria-label="Page Technology"
               >
                 03 Technology
               </NavLink>
