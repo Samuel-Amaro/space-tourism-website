@@ -3,7 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "./routers/Home";
-import Destination, {loader as loaderDestination} from "./routers/Destination";
+import Destination from "./routers/Destination";
+import Crew, { loader as loaderCrew } from "./routers/Crew";
+import Technology, {loader as loaderTech} from "./routers/Technology";
 
 
 const router = createBrowserRouter([
@@ -24,6 +26,16 @@ const router = createBrowserRouter([
   {
     path: "/destination",
     element: <Destination />,
+  },
+  {
+    path: "/crew",
+    element: <Crew />,
+    loader: loaderCrew,
+  },
+  {
+    path: "/technology",
+    element: <Technology />,
+    loader: loaderTech,
   },
 ]);
 

@@ -1,81 +1,91 @@
-import Header from "../components/Header";
 import dataJson from "../api/data.json";
 import { useState } from "react";
-
-//TODO: pensar numar forma de componentizar as imagens e as ddescrições o conteudo
+import SubheadingPage from "../components/SubheadingPage";
+import Picture from "../components/Picture";
+import Section from "../components/Section";
+import LineDiviser from "../components/LineDiviser";
 
 export default function Destination() {
   function changeDestiny(event) {
-    //TODO: tratar o evento de onPressed via click ou tecladdo, obter o destiny que o usuario escolheu e setar o novo destiny
+    setDestiny(event.target.dataset.nameDestination);
   }
 
   function setDestiny(destiny) {
-    //TODO: filtrar o destino escolhido, atualiza o state para setar novos dados na UI
+    let filterDestiny = dataJson.destinations.filter((data) => {
+      return data.name.toLowerCase() === destiny.toLowerCase();
+    });
+    setDestinationSelected(filterDestiny[0]);
   }
 
   const [destinationSelected, setDestinationSelected] = useState(
     dataJson.destinations[0]
   );
+
   return (
-    <section className="main__Section" aria-label="Section Destination">
-      <Header />
-      <div className="main__Content-Section">
-        <h5 className="main__Title-Level5">01 Pick your destination</h5>
-        <div className="main__Container-Content">
-          <picture className="main__Ilustration">
-            <source
-              type="image/webp"
-              srcSet={`${process.env.PUBLIC_URL}${destinationSelected.images.webp}`}
-              className="Ilustration"
-            />
-            <img
-              src={`${process.env.PUBLIC_URL}${destinationSelected.images.png}`}
-              alt={destinationSelected.description}
-              className="Ilustration"
-            />
-          </picture>
-          <div className="main__Container-Description">
-            <ul
-              className="main__List-Destination"
-              aria-label="List and navigation links to know destination"
-            >
-              <li className="main__Item-Dest" aria-label="Destination Moon">
-                Moon
+    <Section nameSection="Destination">
+      <SubheadingPage number="01" titlePage="Pick your destination" />
+      <div className="section__Container-Content">
+        <Picture
+          source={destinationSelected.images.webp}
+          src={destinationSelected.images.png}
+          alt={destinationSelected.description}
+        />
+        <ul
+          className="section__List"
+          aria-label="List and navigation links to know destination"
+          title="Pick your destination"
+        >
+          {dataJson.destinations.map((data) => {
+            return (
+              /*TODO: pensar em uma forma de fazer o elemento escolhido se tornar ativo*/
+              <li className="section__Item-Dest" key={data.name}>
+                <button
+                  type="button"
+                  className="section__Button-Destination"
+                  aria-label={`Destination ${data.name}`}
+                  title={`Destination ${data.name}`}
+                  data-name-destination={data.name.toLowerCase()}
+                  onPointerDown={changeDestiny}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter") {
+                      changeDestiny(event);
+                    }
+                  }}
+                >
+                  {data.name}
+                </button>
               </li>
-              <li className="main__Item-Link" aria-label="Destination Mars">
-                Mars
-              </li>
-              <li className="main__Item-Link" aria-label="Destination Europa">
-                Europa
-              </li>
-              <li className="main__Item-Link" aria-label="Destination Titan">
-                Titan
-              </li>
-            </ul>
-            <h1 className="main__Title-Level1">{destinationSelected.name}</h1>
-            <p className="main__Description">
-              {destinationSelected.description}
-            </p>
-            <hr className="Line-Diviser" />
-            <div className="main__Statistics">
-              <div className="main__Side-Statistics">
-                <span className="main__Subheading-Level2">Avg. distance</span>
-                <span className="main__Value-Statistics">
-                  {destinationSelected.distance}
-                </span>
-              </div>
-              <div className="main__Side-Statistics">
-                <span className="main__Subheading-Level2">
-                  Est. travel time
-                </span>
-                <span className="main__Value-Statistics">
-                  {destinationSelected.travel}
-                </span>
-              </div>
+            );
+          })}
+        </ul>
+        <div
+          className="section__Container-Description"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          <h1 className="section__Title-Level1">{destinationSelected.name}</h1>
+          <p className="section__Description">
+            {destinationSelected.description}
+          </p>
+          <LineDiviser />
+          <div className="section__Statistics">
+            <div className="section__Side-Statistics">
+              <span className="section__Subheading-Level2">Avg. distance</span>
+              <span className="section__Value-Statistics">
+                {destinationSelected.distance}
+              </span>
+            </div>
+            <div className="section__Side-Statistics">
+              <span className="section__Subheading-Level2">
+                Est. travel time
+              </span>
+              <span className="section__Value-Statistics">
+                {destinationSelected.travel}
+              </span>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
