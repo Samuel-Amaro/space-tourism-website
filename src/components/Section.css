@@ -1,0 +1,13 @@
+/*****MOBILE-FIRST*****/
+
+.Section{
+    min-height: 100vh;
+    padding: 24px 24px 48px 24px;
+}
+
+.section__Home{
+    background-image: url("../images/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

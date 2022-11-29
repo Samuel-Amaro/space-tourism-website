@@ -1,13 +1,64 @@
-body {
+@import-normalize;
+
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+  --color-01: #0B0D17;
+  --color-02: #D0D6F9;
+  --color-03: #FFFFFF;
+  --color-04: #979797;
+}
+
+h1, h2, h3, h4{
+  font-family: 'Bellefair', serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h5{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/*****MOBILE-FIRST******/
+.Title-Level1{
+  font-size: 80px;
+  line-height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-03);
+}
+
+.Title-Level5{
+  color: var(--color-02);
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 19.2px;
+  letter-spacing: 2.7px;
+  text-align: center;
+}
+
+body{
+  font-family: 'Barlow', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  /*line-height: 32px;*/
+  position: relative; /*relative a menu in mobile-first*/
+}
+
+.Description{
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--color-02);
+}
+
+.Main{
+  min-height: 100vh;
 }

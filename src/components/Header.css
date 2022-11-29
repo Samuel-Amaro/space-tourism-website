@@ -1,0 +1,87 @@
+/****MOBILE-FIRST****/
+
+.header__Line,
+.header__Nav {
+  display: none;
+}
+
+.header__Link-Logo {
+  display: block;
+  text-decoration: none;
+}
+
+.header__Logo,
+.header__Btn-Menu img,
+.header__Btn-Close img {
+  display: block;
+}
+
+.header__Logo {
+  width: 40px;
+  height: 40px;
+}
+
+.header__Btn-Menu,
+.header__Btn-Close {
+  display: block;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
+.header__Btn-Menu {
+  width: 24px;
+  height: 21px;
+}
+
+.header__Btn-Close {
+  width: 19px;
+  height: 19px;
+  margin: 0 0 64.95px auto;
+}
+
+.header__Container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__Nav {
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgb(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  z-index: 1000;
+  width: 254px;
+  padding: 33.95px 26.45px 0 32px;
+}
+
+.header__List-Links {
+  list-style: none;
+}
+
+.header__Link {
+  display: block;
+  text-decoration: none;
+  color: var(--color-03);
+  font-family: "Barlow Condensed", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+
+.header__Number-Page{
+    display: inline-block;
+    font-weight: 700;
+}
+
+.header__Item-Link:nth-child(-n+3){
+    margin: 0 0 32px 0;
+}

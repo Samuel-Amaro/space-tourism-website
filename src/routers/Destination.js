@@ -4,22 +4,27 @@ import SubheadingPage from "../components/SubheadingPage";
 import Picture from "../components/Picture";
 import Section from "../components/Section";
 import LineDiviser from "../components/LineDiviser";
+import { useLoaderData } from "react-router-dom";
+
+export async function loader() {
+  return dataJson.destinations;
+}
 
 export default function Destination() {
+  const dataPageDestination = useLoaderData();
+
   function changeDestiny(event) {
     setDestiny(event.target.dataset.nameDestination);
   }
 
   function setDestiny(destiny) {
-    let filterDestiny = dataJson.destinations.filter((data) => {
+    let filterDestiny = dataPageDestination.filter((data) => {
       return data.name.toLowerCase() === destiny.toLowerCase();
     });
     setDestinationSelected(filterDestiny[0]);
   }
 
-  const [destinationSelected, setDestinationSelected] = useState(
-    dataJson.destinations[0]
-  );
+  const [destinationSelected, setDestinationSelected] = useState(dataPageDestination[0]);
 
   return (
     <Section nameSection="Destination">
