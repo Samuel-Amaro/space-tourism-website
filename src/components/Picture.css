@@ -1,0 +1,8 @@
+.Ilustration{
+    display: block;
+}
+
+.ilustration__Img{
+    display: block;
+    max-width: 100%;
+}

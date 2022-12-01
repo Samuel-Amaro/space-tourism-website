@@ -58,6 +58,8 @@
   z-index: 1000;
   width: 254px;
   padding: 33.95px 26.45px 0 32px;
+  /*transform: translateX(0);*/
+  transition: transform 0.35s ease;
 }
 
 .header__List-Links {
@@ -77,11 +79,16 @@
   text-transform: uppercase;
 }
 
-.header__Number-Page{
-    display: inline-block;
-    font-weight: 700;
+.header__Number-Page {
+  display: inline-block;
+  font-weight: 700;
 }
 
-.header__Item-Link:nth-child(-n+3){
-    margin: 0 0 32px 0;
+.header__Item-Link:nth-child(-n + 3) {
+  margin: 0 0 32px 0;
+}
+
+.header__Nav_Close{
+  /*transform: translateX(100%);*/
+  display: none;
 }

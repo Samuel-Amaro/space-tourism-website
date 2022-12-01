@@ -5,6 +5,8 @@ import dataJson from "../api/data.json";
 import { useLoaderData } from "react-router-dom";
 import LineDiviser from "../components/LineDiviser";
 import { useState } from "react";
+import replaceBg from "../utils/utils";
+import Header from "../components/Header";
 
 export async function loader() {
   //filter data to page crew
@@ -26,11 +28,21 @@ export default function Crew() {
     setCrewSelected(filteredCrewSelected[0]);
   }
 
+  /*useEffect(() => {
+    //document.querySelector("body").dataset.bgPage = "crew";
+    replaceBg("body-page_Bg--Crew");
+  }, []);
+  */
+
+  replaceBg("body-page_Bg--Crew");
+
   const [crewSelected, setCrewSelected] = useState(dataPageCrew[0]);
+
   return (
     <Section nameSection="Crew">
+      <Header />
       <SubheadingPage number="02" titlePage="Meet your crew" />
-      <div className="section__Container-Content">
+      <div className="section__Content-Crew">
         <Picture
           source={crewSelected.images.webp}
           src={crewSelected.images.png}

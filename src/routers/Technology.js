@@ -1,9 +1,11 @@
 import Section from "../components/Section";
-import SubheadingPage from "../components/SubheadingPage";
 import dataJson from "../api/data.json";
-import { useState } from "react";
+import {useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Picture from "../components/Picture";
+import replaceBg from "../utils/utils";
+import Header from "../components/Header";
+import SubheadingPage from "../components/SubheadingPage";
 
 export async function loader() {
   return dataJson.technology;
@@ -18,19 +20,26 @@ export default function Technology() {
 
   function setSpaceLaunch(nameLaunchSpace) {
     let filteredSpaceLaunch = dataTechnology.filter((data) => {
-        return data.name.toLowerCase() === nameLaunchSpace.toLowerCase();
+      return data.name.toLowerCase() === nameLaunchSpace.toLowerCase();
     });
     setSelectedSpaceLaunch(filteredSpaceLaunch[0]);
   }
 
-  
+  /*useEffect(() => {
+    //document.querySelector("body").dataset.bgPage = "technology";
+    replaceBg("body-page_Bg--Technology");
+  }, []);*/
+  replaceBg("body-page_Bg--Technology");
+
   const [selectedSpaceLaunch, setSelectedSpaceLaunch] = useState(
     dataTechnology[0]
   );
+
   return (
     <Section nameSection="Technology">
+      <Header />
       <SubheadingPage number="03" titlePage="Space launch 101" />
-      <div className="section__Container-Content">
+      <div className="section__Content-Technology">
         <Picture
           source={selectedSpaceLaunch.images.landscape}
           src={selectedSpaceLaunch.images.portrait}
@@ -64,7 +73,9 @@ export default function Technology() {
         >
           <span className="section__Subheading-Level3">The terminology...</span>
           <h3 className="section__Title-Level3">{selectedSpaceLaunch.name}</h3>
-          <p className="section__Description">{selectedSpaceLaunch.description}</p>
+          <p className="section__Description">
+            {selectedSpaceLaunch.description}
+          </p>
         </div>
       </div>
     </Section>

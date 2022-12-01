@@ -5,6 +5,9 @@ import Picture from "../components/Picture";
 import Section from "../components/Section";
 import LineDiviser from "../components/LineDiviser";
 import { useLoaderData } from "react-router-dom";
+import "./Destination.css";
+import replaceBg from "../utils/utils";
+import Header from "../components/Header";
 
 export async function loader() {
   return dataJson.destinations;
@@ -24,12 +27,20 @@ export default function Destination() {
     setDestinationSelected(filterDestiny[0]);
   }
 
+  /*useEffect(() => {
+    //document.querySelector("body").dataset.bgPage = "destination";
+    replaceBg("body-page_Bg--Destination");
+  }, []);*/
+
+   replaceBg("body-page_Bg--Destination");
+
   const [destinationSelected, setDestinationSelected] = useState(dataPageDestination[0]);
 
   return (
     <Section nameSection="Destination">
+      <Header />
       <SubheadingPage number="01" titlePage="Pick your destination" />
-      <div className="section__Container-Content">
+      <div className="section__Content-Destination">
         <Picture
           source={destinationSelected.images.webp}
           src={destinationSelected.images.png}

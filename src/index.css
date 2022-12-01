@@ -1,32 +1,37 @@
 @import-normalize;
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-:root{
-  --color-01: #0B0D17;
-  --color-02: #D0D6F9;
-  --color-03: #FFFFFF;
+:root {
+  --color-01: #0b0d17;
+  --color-02: #d0d6f9;
+  --color-03: #ffffff;
   --color-04: #979797;
 }
 
-h1, h2, h3, h4{
-  font-family: 'Bellefair', serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bellefair", serif;
   font-style: normal;
   font-weight: 400;
 }
 
-h5{
-  font-family: 'Barlow Condensed', sans-serif;
+h5 {
+  font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
 /*****MOBILE-FIRST******/
-.Title-Level1{
+
+/***TITLES***/
+.Title-Level1 {
   font-size: 80px;
   line-height: 100px;
   text-align: center;
@@ -34,25 +39,38 @@ h5{
   color: var(--color-03);
 }
 
-.Title-Level5{
+.Title-Level5 {
   color: var(--color-02);
   font-size: 16px;
   text-transform: uppercase;
-  line-height: 19.2px;
+  line-height: 19px;
   letter-spacing: 2.7px;
   text-align: center;
 }
 
-body{
-  font-family: 'Barlow', sans-serif;
+.title-level5__Number-Page {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 18px;
+  color: var(--color-04);
+}
+
+.Body-Page{
+  font-family: "Barlow", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   /*line-height: 32px;*/
-  position: relative; /*relative a menu in mobile-first*/
+  /*position: relative;*/ /*relative a menu in mobile-first*/
+  /*overflow: hidden;*/ /*menu mobile-first translate overflow*/
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /*transition: background 3s ease;*/
 }
 
-.Description{
+.Description {
   font-size: 15px;
   line-height: 25px;
   text-align: center;
@@ -61,4 +79,22 @@ body{
 
 .Main{
   min-height: 100vh;
+}
+
+/***BACKGROUND-IMAGENS MOBILE***/
+
+.body-page_Bg--Home/*[data-bg-page="/"], [data-bg-page="home"]*/{
+  background-image: url("./images/home/background-home-mobile.jpg");
+}
+
+.body-page_Bg--Destination/*[data-bg-page="destination"]*/{
+  background-image: url("./images/destination/background-destination-mobile.jpg");
+}
+
+.body-page_Bg--Crew/*[data-bg-page="crew"]*/{
+  background-image: url("./images/crew/background-crew-mobile.jpg");
+}
+
+.body-page_Bg--Technology/*[data-bg-page="technology"]*/{
+  background-image: url("./images/technology/background-technology-mobile.jpg");
 }

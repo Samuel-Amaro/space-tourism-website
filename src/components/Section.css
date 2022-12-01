@@ -1,13 +1,28 @@
 /*****MOBILE-FIRST*****/
 
 .Section{
-    min-height: 100vh;
     padding: 24px 24px 48px 24px;
+    /*position: relative;*//*nav mobile-first absolute*/
+    /*height: 100%;
+    overflow-x: hidden;*//*nav mobile-first absolute*/
+    /*background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
 }
 
-.section__Home{
-    background-image: url("../images/home/background-home-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+/**background-images**/
+/*.section__Home{
+    background-image: url("../../public/assets/home/background-home-mobile.jpg");
 }
+
+.section__Destination{
+    background-image: url("../../public/assets/destination/background-destination-mobile.jpg");
+}
+
+.section__Crew{
+    background-image: url("../../public/assets/crew/background-crew-mobile.jpg");
+}
+
+.section__Technology{
+    background-image: url("../../public/assets/technology/background-technology-mobile.jpg");
+}*/

@@ -6,12 +6,13 @@ import Home from "./routers/Home";
 import Destination, {loader as loaderDestination} from "./routers/Destination";
 import Crew, { loader as loaderCrew } from "./routers/Crew";
 import Technology, {loader as loaderTech} from "./routers/Technology";
+import Root from "./routers/Root";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Root />,
     children: [
       {
         index: true,
