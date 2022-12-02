@@ -1,12 +1,12 @@
-import Picture from "../components/Picture";
 import Section from "../components/Section";
 import SubheadingPage from "../components/SubheadingPage";
 import dataJson from "../api/data.json";
 import { useLoaderData } from "react-router-dom";
 import LineDiviser from "../components/LineDiviser";
-import { useState } from "react";
+import { useEffect ,useState } from "react";
 import replaceBg from "../utils/utils";
 import Header from "../components/Header";
+import "./Crew.css";
 
 export async function loader() {
   //filter data to page crew
@@ -28,26 +28,36 @@ export default function Crew() {
     setCrewSelected(filteredCrewSelected[0]);
   }
 
-  /*useEffect(() => {
+  useEffect(() => {
     //document.querySelector("body").dataset.bgPage = "crew";
     replaceBg("body-page_Bg--Crew");
   }, []);
-  */
-
-  replaceBg("body-page_Bg--Crew");
 
   const [crewSelected, setCrewSelected] = useState(dataPageCrew[0]);
 
   return (
     <Section nameSection="Crew">
       <Header />
-      <SubheadingPage number="02" titlePage="Meet your crew" />
+      <SubheadingPage
+        number="02"
+        titlePage="Meet your crew"
+        classNameAdd="title-level5_Color title-level5_Mg--Pages"
+      />
       <div className="section__Content-Crew">
-        <Picture
-          source={crewSelected.images.webp}
-          src={crewSelected.images.png}
-          alt={crewSelected.bio}
-        />
+        <picture className="section__Ilustration-Crew">
+          <source
+            type={"image/webp"}
+            srcSet={`${process.env.PUBLIC_URL}${crewSelected.images.webp}`}
+            className="section__Img-Crew"
+          />
+          <img
+            src={`${process.env.PUBLIC_URL}${crewSelected.images.png}`}
+            alt={crewSelected.bio}
+            className="section__Img-Crew section__ilustration-Crew_Size"
+            aria-live="polite"
+            aria-atomic="true"
+          />
+        </picture>
         <LineDiviser />
         <ul
           className="section__List-Teams"
@@ -88,7 +98,7 @@ export default function Crew() {
         >
           <h4 className="section__Title-Level4">{crewSelected.role}</h4>
           <h3 className="section__Title-Level3">{crewSelected.name}</h3>
-          <p className="section__Description">{crewSelected.bio}</p>
+          <p className="Description-Text">{crewSelected.bio}</p>
         </div>
       </div>
     </Section>

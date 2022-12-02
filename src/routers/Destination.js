@@ -1,7 +1,6 @@
 import dataJson from "../api/data.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SubheadingPage from "../components/SubheadingPage";
-import Picture from "../components/Picture";
 import Section from "../components/Section";
 import LineDiviser from "../components/LineDiviser";
 import { useLoaderData } from "react-router-dom";
@@ -18,6 +17,7 @@ export default function Destination() {
 
   function changeDestiny(event) {
     setDestiny(event.target.dataset.nameDestination);
+    setIsDestinationTabSelected(event.target.dataset.nameDestination);
   }
 
   function setDestiny(destiny) {
@@ -27,25 +27,37 @@ export default function Destination() {
     setDestinationSelected(filterDestiny[0]);
   }
 
-  /*useEffect(() => {
+  useEffect(() => {
     //document.querySelector("body").dataset.bgPage = "destination";
     replaceBg("body-page_Bg--Destination");
-  }, []);*/
+  }, []);
 
-   replaceBg("body-page_Bg--Destination");
-
-  const [destinationSelected, setDestinationSelected] = useState(dataPageDestination[0]);
+  const[destinationSelected, setDestinationSelected] = useState(dataPageDestination[0]);
+  const [isDestinationTabSelected, setIsDestinationTabSelected] = useState("moon");
 
   return (
     <Section nameSection="Destination">
       <Header />
-      <SubheadingPage number="01" titlePage="Pick your destination" />
+      <SubheadingPage
+        number="01"
+        titlePage="Pick your destination"
+        classNameAdd="title-level5_Color title-level5_Mg--Pages"
+      />
       <div className="section__Content-Destination">
-        <Picture
-          source={destinationSelected.images.webp}
-          src={destinationSelected.images.png}
-          alt={destinationSelected.description}
-        />
+        <picture className="section__Ilustration-Destination section__ilustration-destination_Size">
+          <source
+            type={"image/webp"}
+            srcSet={`${process.env.PUBLIC_URL}${destinationSelected.images.webp}`}
+            className="section__Img-Destination"
+          />
+          <img
+            src={`${process.env.PUBLIC_URL}${destinationSelected.images.png}`}
+            alt={destinationSelected.description}
+            className="section__Img-Destination"
+            aria-live="polite"
+            aria-atomic="true"
+          />
+        </picture>
         <ul
           className="section__List"
           aria-label="List and navigation links to know destination"
@@ -57,7 +69,11 @@ export default function Destination() {
               <li className="section__Item-Dest" key={data.name}>
                 <button
                   type="button"
-                  className="section__Button-Destination"
+                  className={
+                    isDestinationTabSelected === data.name.toLocaleLowerCase()
+                      ? `section__Button-Destination section__button-destination_Active`
+                      : "section__Button-Destination"
+                  }
                   aria-label={`Destination ${data.name}`}
                   title={`Destination ${data.name}`}
                   data-name-destination={data.name.toLowerCase()}
@@ -79,23 +95,27 @@ export default function Destination() {
           aria-live="polite"
           aria-atomic="true"
         >
-          <h1 className="section__Title-Level1">{destinationSelected.name}</h1>
-          <p className="section__Description">
+          <h3 className="section__Title-Level3-Destination section__title-level3-destination_Mod--Dest">
+            {destinationSelected.name}
+          </h3>
+          <p className="section__Description-Text-Destination section__description-text-destination_Mod">
             {destinationSelected.description}
           </p>
           <LineDiviser />
           <div className="section__Statistics">
             <div className="section__Side-Statistics">
-              <span className="section__Subheading-Level2">Avg. distance</span>
-              <span className="section__Value-Statistics">
+              <span className="section__Subheading-Level2-Destination section__subheading-level2-Destination_Mod--Dest">
+                Avg. distance
+              </span>
+              <span className="section__Subheading-Level1-Destination section__subheading-level1-destination_Mod--Text">
                 {destinationSelected.distance}
               </span>
             </div>
             <div className="section__Side-Statistics">
-              <span className="section__Subheading-Level2">
+              <span className="section__Subheading-Level2-Destination section__subheading-level2-Destination_Mod--Dest">
                 Est. travel time
               </span>
-              <span className="section__Value-Statistics">
+              <span className="section__Subheading-Level1-Destination section__subheading-level1-destination_Mod--Text">
                 {destinationSelected.travel}
               </span>
             </div>

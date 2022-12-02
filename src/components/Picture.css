@@ -1,8 +1,22 @@
+/*****MOBILE-FIRST*****/
+
 .Ilustration{
     display: block;
+}
+
+.ilustration_size--mobile-destination{
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 26px auto;
 }
 
 .ilustration__Img{
     display: block;
     max-width: 100%;
+}
+
+.ilustration_size--mobile-crew{
+    width: 177.12px;
+    height: 222px;
+    margin: 0 auto;
 }

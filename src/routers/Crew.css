@@ -1,0 +1,37 @@
+.section__ilustration-Crew_Size{
+    /*width: 177.12px;
+    height: 222px;
+    */
+    margin: 0 auto;
+    width: 50%;
+}
+
+.section__List-Teams{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 32px 0 0 0;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__Input-Crew{
+    display: block;
+    appearance: none;
+    border: none;
+    width: 10px;
+    height: 10px;
+    background-color: #474952;
+    border-radius: 50%;
+}
+
+.section__Input-Crew:hover, .section__Input-Crew:focus{
+    background-color: #85868B;
+}
+
+.section__Input-Crew:checked{
+    background-color: var(--color-03);
+}
+
+

@@ -1,3 +1,11 @@
 .title-level5_Color{
   color: var(--color-03);
 }
+
+.title-level5_Mg--Pages{
+  margin: 24px 0 32px 0;
+}
+
+.title-level5_Mg--Home{
+  margin: 0 0 16px 0;
+}

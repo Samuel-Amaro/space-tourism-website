@@ -1,6 +1,6 @@
 import Section from "../components/Section";
 import dataJson from "../api/data.json";
-import {useState } from "react";
+import {useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Picture from "../components/Picture";
 import replaceBg from "../utils/utils";
@@ -25,11 +25,10 @@ export default function Technology() {
     setSelectedSpaceLaunch(filteredSpaceLaunch[0]);
   }
 
-  /*useEffect(() => {
+  useEffect(() => {
     //document.querySelector("body").dataset.bgPage = "technology";
     replaceBg("body-page_Bg--Technology");
-  }, []);*/
-  replaceBg("body-page_Bg--Technology");
+  }, []);
 
   const [selectedSpaceLaunch, setSelectedSpaceLaunch] = useState(
     dataTechnology[0]
@@ -38,7 +37,11 @@ export default function Technology() {
   return (
     <Section nameSection="Technology">
       <Header />
-      <SubheadingPage number="03" titlePage="Space launch 101" />
+      <SubheadingPage
+        number="03"
+        titlePage="Space launch 101"
+        classNameAdd="title-level5_Color title-level5_Mg--Pages"
+      />
       <div className="section__Content-Technology">
         <Picture
           source={selectedSpaceLaunch.images.landscape}

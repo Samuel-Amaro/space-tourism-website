@@ -1,0 +1,6 @@
+.Line-Diviser{
+    display: block;
+    border: none;
+    border-top: 1px solid var(--color-05);
+    height: 1px;
+}

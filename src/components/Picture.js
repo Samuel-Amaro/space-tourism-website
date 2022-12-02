@@ -2,7 +2,7 @@ import "./Picture.css";
 
 export default function Picture(props) {
     return (
-      <picture className="Ilustration">
+      <picture className={"Ilustration"}>
         <source
           type={props.type ? props.type : "image/webp"}
           srcSet={`${process.env.PUBLIC_URL}${props.source}`}
@@ -12,7 +12,7 @@ export default function Picture(props) {
         <img
           src={`${process.env.PUBLIC_URL}${props.src}`}
           alt={props.alt}
-          className="ilustration__Img"
+          className={props.classNameAdd ? `ilustration__img ${props.classNameAdd}` : "ilustration__img"}
           aria-live="polite"
           aria-atomic="true"
         />
