@@ -5,10 +5,16 @@ import iconMenu from "../images/icon-hamburger.svg";
 import iconClose from "../images/icon-close.svg";
 import {useState } from "react";
 
-export default function Header() {
+export default function Header(props) {
   const [navIsOpen, setNavIsOpen] = useState(false);
   return (
-    <header className="Header header_Mg">
+    <header
+      className={
+        props.classNameAdd
+          ? `Header header_Mg ${props.classNameAdd}`
+          : "Header header_Mg"
+      }
+    >
       <div className="header__Container">
         <NavLink
           to="/home"
@@ -28,7 +34,7 @@ export default function Header() {
           aria-expanded={navIsOpen}
           title="Expanded Menu Navigation to Pages With Click or key Enter"
           onPointerDown={(event) => {
-            setNavIsOpen(true)
+            setNavIsOpen(true);
           }}
           onKeyDown={(event) => {
             if (event.key === "Enter") {

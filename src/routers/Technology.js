@@ -2,10 +2,10 @@ import Section from "../components/Section";
 import dataJson from "../api/data.json";
 import {useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import Picture from "../components/Picture";
 import replaceBg from "../utils/utils";
 import Header from "../components/Header";
 import SubheadingPage from "../components/SubheadingPage";
+import "./Technology.css";
 
 export async function loader() {
   return dataJson.technology;
@@ -36,20 +36,28 @@ export default function Technology() {
 
   return (
     <Section nameSection="Technology">
-      <Header />
+      <Header classNameAdd="header_Spacing" />
       <SubheadingPage
         number="03"
         titlePage="Space launch 101"
         classNameAdd="title-level5_Color title-level5_Mg--Pages"
       />
       <div className="section__Content-Technology">
-        <Picture
-          source={selectedSpaceLaunch.images.landscape}
-          src={selectedSpaceLaunch.images.portrait}
-          alt={selectedSpaceLaunch.description}
-          type="image/jpeg"
-          media="(max-width: 900px)"
-        />
+        <picture className="section__Ilustration-Technology">
+          <source
+            type="image/jpeg"
+            srcSet={`${process.env.PUBLIC_URL}${selectedSpaceLaunch.images.landscape}`}
+            className="section__Img-Technology section__ilustration-Technology_Size"
+            media="(max-width: 900px)"
+          />
+          <img
+            src={`${process.env.PUBLIC_URL}${selectedSpaceLaunch.images.portrait}`}
+            alt={selectedSpaceLaunch.description}
+            className="section__Img-Technology section__ilustration-Technology_Size"
+            aria-live="polite"
+            aria-atomic="true"
+          />
+        </picture>
         {/*TODO: pensar em uma forma de fazer o elemento escolhido se tornar ativo*/}
         <ul className="section__Space-Launch" aria-label="Choose Space Launch">
           {dataTechnology.map((data, index) => {
@@ -57,7 +65,11 @@ export default function Technology() {
               <li className="section__Item-Space-Launch" key={index + 1}>
                 <button
                   type="button"
-                  className="section__Button-Space-Launch"
+                  className={
+                    selectedSpaceLaunch.name === data.name
+                      ? `section__Button-Space-Launch section__button-space-launch_Active`
+                      : "section__Button-Space-Launch"
+                  }
                   aria-label={`Space Launch ${data.name}`}
                   title={`Space Launch ${data.name}`}
                   onPointerDown={handlerSpaceLaunch}
@@ -74,9 +86,13 @@ export default function Technology() {
           aria-live="polite"
           aria-atomic="true"
         >
-          <span className="section__Subheading-Level3">The terminology...</span>
-          <h3 className="section__Title-Level3">{selectedSpaceLaunch.name}</h3>
-          <p className="section__Description">
+          <span className="section__Subheading-Level2-Technology  section__subheading-level2-technology_Mod--Text">
+            The terminology...
+          </span>
+          <h3 className="section__Title-Level3-Technology section__title-level3-technology_Mod--Text">
+            {selectedSpaceLaunch.name}
+          </h3>
+          <p className="section__Description-Text-Technology section__description-text-technology_Mod--Text">
             {selectedSpaceLaunch.description}
           </p>
         </div>

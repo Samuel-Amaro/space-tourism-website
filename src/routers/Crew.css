@@ -1,37 +1,55 @@
-.section__ilustration-Crew_Size{
-    /*width: 177.12px;
+.section__ilustration-Crew_Size {
+  /*width: 177.12px;
     height: 222px;
     */
-    margin: 0 auto;
-    width: 50%;
+  margin: 0 auto;
+  width: 50%;
 }
 
-.section__List-Teams{
-    list-style: none;
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 32px 0 0 0;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
+.section__List-Teams {
+  margin: 32px 0 32px 0;
+  gap: 16px;
 }
 
-.section__Input-Crew{
-    display: block;
-    appearance: none;
-    border: none;
-    width: 10px;
-    height: 10px;
-    background-color: #474952;
-    border-radius: 50%;
+.section__Input-Crew {
+  display: block;
+  appearance: none;
+  border: none;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-04);
+  border-radius: 50%;
 }
 
-.section__Input-Crew:hover, .section__Input-Crew:focus{
-    background-color: #85868B;
+.section__Input-Crew:hover,
+.section__Input-Crew:focus {
+  background-color: var(--color-02);
 }
 
-.section__Input-Crew:checked{
-    background-color: var(--color-03);
+.section__Input-Crew:checked {
+  background-color: var(--color-03);
 }
 
+.section__title-level3-crew_Mod--Text, .section__title-level4-crew_Mod--Text {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-03);
+}
 
+.section__title-level4-crew_Mod--Text {
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin: 0 0 8px 0;
+}
+
+.section__title-level3-crew_Mod--Text{
+    margin: 0 0 16px;
+}
+
+.section__description-text-crew_Mod-Text{
+    text-align: center;
+}
+
+.section__Content-Crew{
+    padding: 0 0 56px 0;
+}

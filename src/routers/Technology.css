@@ -1,0 +1,64 @@
+.section__Technology {
+  padding: 24px 0 48px 0;
+}
+
+.section__Ilustration-Technology {
+  margin: 0 0 34px 0;
+}
+
+.section__Space-Launch {
+  gap: 16px;
+  margin: 0 0 26px 0;
+}
+
+.section__Button-Space-Launch {
+  display: block;
+  appearance: none;
+  border: none;
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: var(--color-03);
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  padding: 0 0 0 2px;
+}
+
+.section__button-space-launch_Active{
+    background-color: var(--color-03);
+    color: var(--color-01);
+}
+
+.section__Button-Space-Launch:hover, 
+.section__Button-Space-Launch:focus{
+    border-color: var(--color-02);
+}
+
+.section__subheading-level2-technology_Mod--Text{
+    display: block;
+    text-align: center;
+    margin: 0 0 9px 0;
+}
+
+.section__title-level3-technology_Mod--Text{
+    text-align: center;
+    color: var(--color-03);
+    text-transform: uppercase;
+    margin: 0 0 16px 0;
+}
+
+.section__description-text-technology_Mod--Text{
+    text-align: center;
+    margin: 0 24px 0 24px;
+}
+
+.section__Content-Technology{
+    margin: 0 0 52px 0;
+}

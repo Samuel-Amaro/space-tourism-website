@@ -46,7 +46,7 @@ export default function Destination() {
       <div className="section__Content-Destination">
         <picture className="section__Ilustration-Destination section__ilustration-destination_Size">
           <source
-            type={"image/webp"}
+            type="image/webp"
             srcSet={`${process.env.PUBLIC_URL}${destinationSelected.images.webp}`}
             className="section__Img-Destination"
           />
@@ -65,7 +65,6 @@ export default function Destination() {
         >
           {dataJson.destinations.map((data) => {
             return (
-              /*TODO: pensar em uma forma de fazer o elemento escolhido se tornar ativo*/
               <li className="section__Item-Dest" key={data.name}>
                 <button
                   type="button"

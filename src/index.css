@@ -50,6 +50,17 @@ h5 {
   color: var(--color-03);
 }
 
+.section__Title-Level3-Crew,
+.section__Title-Level3-Technology {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.section__Title-Level4-Crew {
+  font-size: 16px;
+  line-height: 18px;
+}
+
 .Title-Level5 {
   color: var(--color-02);
   font-size: 16px;
@@ -73,7 +84,8 @@ h5 {
   text-transform: uppercase;
 }
 
-.section__Subheading-Level2-Destination {
+.section__Subheading-Level2-Destination,
+.section__Subheading-Level2-Technology {
   font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -85,7 +97,9 @@ h5 {
 }
 
 .section__Description-Text-Home,
-.section__Description-Text-Destination {
+.section__Description-Text-Destination,
+.section__Description-Text-Crew,
+.section__Description-Text-Technology {
   font-size: 15px;
   line-height: 25px;
   color: var(--color-02);
@@ -99,7 +113,7 @@ h5 {
   font-weight: 400;
   font-size: 18px;
   /*line-height: 32px;*/
-  /*position: relative;*/ /*relative a menu in mobile-first*/
+  position: relative; /*relative a menu in mobile-first*/
   /*overflow: hidden;*/ /*menu mobile-first translate overflow*/
   min-height: 100vh;
   background-repeat: no-repeat;
@@ -113,15 +127,34 @@ h5 {
   min-height: 100vh;
 }
 
+/*****SECTIONS*****/
+
+.Section {
+  padding: 24px 24px 48px 24px;
+}
+
+/*****LIST AND TABS*****/
+.section__List, 
+.section__List-Teams,
+.section__Space-Launch {
+  display: flex;
+  list-style: none;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 /*****IMAGES ILUSTRATIONS*****/
 
-.section__Ilustration-Destination, 
-.section__Ilustration-Crew {
+.section__Ilustration-Destination,
+.section__Ilustration-Crew,
+.section__Ilustration-Technology {
   display: block;
 }
 
-.section__Img-Destination, 
-.section__Img-Crew{
+.section__Img-Destination,
+.section__Img-Crew,
+.section__Img-Technology {
   display: block;
   max-width: 100%;
 }
@@ -138,7 +171,7 @@ h5 {
 
 .body-page_Bg--Crew/*[data-bg-page="crew"]*/ {
   background-image: url("./images/crew/background-crew-mobile.jpg");
-  /*background-blend-mode: normal;*/
+  background-blend-mode: normal;
 }
 
 .body-page_Bg--Technology/*[data-bg-page="technology"]*/ {

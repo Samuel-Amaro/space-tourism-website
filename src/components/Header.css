@@ -92,3 +92,7 @@
   /*transform: translateX(100%);*/
   display: none;
 }
+
+.header_Spacing{
+  margin: 0 24px;
+}

@@ -29,7 +29,6 @@ export default function Crew() {
   }
 
   useEffect(() => {
-    //document.querySelector("body").dataset.bgPage = "crew";
     replaceBg("body-page_Bg--Crew");
   }, []);
 
@@ -46,7 +45,7 @@ export default function Crew() {
       <div className="section__Content-Crew">
         <picture className="section__Ilustration-Crew">
           <source
-            type={"image/webp"}
+            type="image/webp"
             srcSet={`${process.env.PUBLIC_URL}${crewSelected.images.webp}`}
             className="section__Img-Crew"
           />
@@ -79,13 +78,14 @@ export default function Crew() {
                   className="section__Input-Crew"
                   data-crew-name={data.name}
                   onChange={changeInput}
-                  tabIndex="0"
                   onKeyDown={(event) => {
                     if (event.key === "Enter") {
                       changeInput(event);
                     }
                   }}
+                  tabIndex="0"
                   value={data.name}
+                  checked={crewSelected.name === data.name ? true : false}
                 />
               </li>
             );
@@ -96,9 +96,15 @@ export default function Crew() {
           aria-live="polite"
           aria-atomic="true"
         >
-          <h4 className="section__Title-Level4">{crewSelected.role}</h4>
-          <h3 className="section__Title-Level3">{crewSelected.name}</h3>
-          <p className="Description-Text">{crewSelected.bio}</p>
+          <h4 className="section__Title-Level4-Crew section__title-level4-crew_Mod--Text">
+            {crewSelected.role}
+          </h4>
+          <h3 className="section__Title-Level3-Crew section__title-level3-crew_Mod--Text">
+            {crewSelected.name}
+          </h3>
+          <p className="section__Description-Text-Crew section__description-text-crew_Mod-Text">
+            {crewSelected.bio}
+          </p>
         </div>
       </div>
     </Section>
