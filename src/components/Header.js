@@ -51,7 +51,6 @@ export default function Header(props) {
           />
         </button>
       </div>
-      {/*TODO: PENSAR NA FORMA DE MOSTRAR E OCULTAR NAVBAR NO RESPONSIVO*/}
       <nav
         className={navIsOpen ? "header__Nav" : "header__Nav header__Nav_Close"}
       >

@@ -67,3 +67,10 @@
   margin: 0;
   text-align: center;
 }
+
+/*****BREAKPOINT 525px to TABLETS*****/
+@media screen and (min-width: 540px) {
+  .section__Home{
+    padding: 0 0 0 0;
+  }
+}

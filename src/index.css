@@ -114,12 +114,10 @@ h5 {
   font-size: 18px;
   /*line-height: 32px;*/
   position: relative; /*relative a menu in mobile-first*/
-  /*overflow: hidden;*/ /*menu mobile-first translate overflow*/
   min-height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /*transition: background 3s ease;*/
   background-color: var(--color-01);
 }
 
@@ -134,7 +132,8 @@ h5 {
 }
 
 /*****LIST AND TABS*****/
-.section__List, 
+
+.section__List,
 .section__List-Teams,
 .section__Space-Launch {
   display: flex;
@@ -159,21 +158,60 @@ h5 {
   max-width: 100%;
 }
 
-/***BACKGROUND-IMAGENS MOBILE***/
+/***BACKGROUND-IMAGENS MOBILE-FIRST***/
 
-.body-page_Bg--Home/*[data-bg-page="/"], [data-bg-page="home"]*/ {
+.body-page_Bg--Home {
   background-image: url("./images/home/background-home-mobile.jpg");
+  background-position: center bottom;
 }
 
-.body-page_Bg--Destination/*[data-bg-page="destination"]*/ {
+.body-page_Bg--Destination {
   background-image: url("./images/destination/background-destination-mobile.jpg");
 }
 
-.body-page_Bg--Crew/*[data-bg-page="crew"]*/ {
+.body-page_Bg--Crew {
   background-image: url("./images/crew/background-crew-mobile.jpg");
   background-blend-mode: normal;
 }
 
-.body-page_Bg--Technology/*[data-bg-page="technology"]*/ {
+.body-page_Bg--Technology {
   background-image: url("./images/technology/background-technology-mobile.jpg");
+}
+
+/******BREAKPOINT 525px****/
+@media screen and (min-width: 540px) {
+  .body-page_Bg--Home {
+    background-image: url("./images/home/background-home-tablet.jpg");
+  }
+
+  .body-page_Bg--Destination {
+    background-image: url("./images/destination/background-destination-tablet.jpg");
+  }
+
+  .body-page_Bg--Crew {
+    background-image: url("./images/crew/background-crew-tablet.jpg");
+  }
+
+  .body-page_Bg--Technology {
+    background-image: url("./images/technology/background-technology-tablet.jpg");
+  }
+}
+
+/******BREAKPOINT 768px****/
+@media screen and (min-width: 768px) {
+  .body-page_Bg--Home {
+    background-image: url("./images/home/background-home-desktop.jpg");
+  }
+
+  .body-page_Bg--Destination {
+    background-image: url("./images/destination/background-destination-desktop.jpg");
+  }
+
+  .body-page_Bg--Crew {
+    background-image: url("./images/crew/background-crew-desktop.jpg");
+  }
+
+  .body-page_Bg--Technology {
+    background-image: url("./images/technology/background-technology-desktop.jpg");
+  }
 }
