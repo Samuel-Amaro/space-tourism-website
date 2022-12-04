@@ -34,7 +34,6 @@ h5 {
   font-weight: 400;
 }
 
-/*.Title-Level1,*/
 .section__Title-Level1-Home {
   font-size: 80px;
   line-height: 100px;
@@ -158,7 +157,7 @@ h5 {
   max-width: 100%;
 }
 
-/***BACKGROUND-IMAGENS MOBILE-FIRST***/
+/*****BACKGROUND-IMAGENS MOBILE-FIRST*****/
 
 .body-page_Bg--Home {
   background-image: url("./images/home/background-home-mobile.jpg");
@@ -180,6 +179,7 @@ h5 {
 
 /******BREAKPOINT 525px****/
 @media screen and (min-width: 540px) {
+  /*****BACKGROUND-IMAGENS TO TABLETS*****/
   .body-page_Bg--Home {
     background-image: url("./images/home/background-home-tablet.jpg");
   }
@@ -194,6 +194,23 @@ h5 {
 
   .body-page_Bg--Technology {
     background-image: url("./images/technology/background-technology-tablet.jpg");
+  }
+
+  /*****TEXT AND TITLES TO TABLETS*****/
+  .Title-Level5 {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+
+  .section__Title-Level1-Home {
+    font-size: 150px;
+    line-height: 150px;
+  }
+
+  .section__Description-Text-Home{
+    font-size: 16px;
+    line-height: 28px;
   }
 }
 

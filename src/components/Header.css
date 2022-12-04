@@ -97,7 +97,7 @@
   margin: 0 24px;
 }
 
-/****BREAKPOINT 525px to TABLETS*****/
+/****BREAKPOINT 540px to TABLETS*****/
 @media screen and (min-width: 540px) {
   .header__Btn-Menu,
   .header__Btn-Close,
