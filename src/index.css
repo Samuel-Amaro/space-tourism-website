@@ -60,20 +60,27 @@ h5 {
   line-height: 18px;
 }
 
-.Title-Level5 {
+.section__Title-Level5-Home,
+.section__Title-Level5-Destination,
+.section__Title-Level5-Crew,
+.section__Title-Level5-Technology {
   color: var(--color-02);
   font-size: 16px;
   text-transform: uppercase;
   line-height: 19px;
   letter-spacing: 2.7px;
-  text-align: center;
 }
 
-.title-level5__Number-Page {
+.section-title-level5__Number-Page {
   display: inline-block;
   font-weight: 700;
   margin-right: 18px;
   color: var(--color-04);
+}
+
+.section-title-level5_Mod--Text {
+  margin: 24px 0 32px 0;
+  text-align: center;
 }
 
 .section__Subheading-Level1-Destination {
@@ -177,7 +184,7 @@ h5 {
   background-image: url("./images/technology/background-technology-mobile.jpg");
 }
 
-/******BREAKPOINT 525px****/
+/******BREAKPOINT 540px****/
 @media screen and (min-width: 540px) {
   /*****BACKGROUND-IMAGENS TO TABLETS*****/
   .body-page_Bg--Home {
@@ -197,10 +204,18 @@ h5 {
   }
 
   /*****TEXT AND TITLES TO TABLETS*****/
-  .Title-Level5 {
+  .section__Title-Level5-Home,
+  .section__Title-Level5-Destination,
+  .section__Title-Level5-Crew,
+  .section__Title-Level5-Technology {
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 3.375px;
+  }
+
+  .section-title-level5_Mod--Text {
+    margin: 40px 0 60px 39px;
+    text-align: left;
   }
 
   .section__Title-Level1-Home {
@@ -208,7 +223,7 @@ h5 {
     line-height: 150px;
   }
 
-  .section__Description-Text-Home{
+  .section__Description-Text-Home {
     font-size: 16px;
     line-height: 28px;
   }

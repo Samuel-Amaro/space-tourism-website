@@ -4,8 +4,6 @@ import "./Home.css";
 import replaceBg from "../utils/utils";
 import Header from "../components/Header";
 import { useEffect } from "react";
-import SubheadingPage from "../components/SubheadingPage";
-
 
 export default function Home() {
   useEffect(() => {
@@ -16,13 +14,9 @@ export default function Home() {
       <Header />
       <div className="section__Content-Home">
         <div className="section__Side-Content">
-          <SubheadingPage
-            titlePage="So, you want to travel to"
-            classNameAdd="title-level5_Mg--Home"
-          />
-          {/*<h5 className="Title-Level5 title-level5_Mg">
+          <h5 className="section__Title-Level5-Home section__title-level5-home_Mod--Text">
             So, you want to travel to
-          </h5>*/}
+          </h5>
           <h1 className="section__Title-Level1-Home section__title-level1-home_Mg">
             Space
           </h1>

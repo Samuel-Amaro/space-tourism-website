@@ -1,5 +1,4 @@
 import Section from "../components/Section";
-import SubheadingPage from "../components/SubheadingPage";
 import dataJson from "../api/data.json";
 import { useLoaderData } from "react-router-dom";
 import LineDiviser from "../components/LineDiviser";
@@ -37,11 +36,10 @@ export default function Crew() {
   return (
     <Section nameSection="Crew">
       <Header />
-      <SubheadingPage
-        number="02"
-        titlePage="Meet your crew"
-        classNameAdd="title-level5_Color title-level5_Mg--Pages"
-      />
+      <h5 className="section__Title-Level5-Crew section-title-level5_Mod--Text">
+        <span className="section-title-level5__Number-Page">02</span>Meet your
+        crew
+      </h5>
       <div className="section__Content-Crew">
         <picture className="section__Ilustration-Crew">
           <source

@@ -4,7 +4,6 @@ import {useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import replaceBg from "../utils/utils";
 import Header from "../components/Header";
-import SubheadingPage from "../components/SubheadingPage";
 import "./Technology.css";
 
 export async function loader() {
@@ -37,11 +36,10 @@ export default function Technology() {
   return (
     <Section nameSection="Technology">
       <Header classNameAdd="header_Spacing" />
-      <SubheadingPage
-        number="03"
-        titlePage="Space launch 101"
-        classNameAdd="title-level5_Color title-level5_Mg--Pages"
-      />
+      <h5 className="section__Title-Level5-Technology section-title-level5_Mod--Text">
+        <span className="section-title-level5__Number-Page">03</span>Space
+        launch 101
+      </h5>
       <div className="section__Content-Technology">
         <picture className="section__Ilustration-Technology">
           <source

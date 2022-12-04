@@ -1,6 +1,5 @@
 import dataJson from "../api/data.json";
 import { useEffect, useState } from "react";
-import SubheadingPage from "../components/SubheadingPage";
 import Section from "../components/Section";
 import LineDiviser from "../components/LineDiviser";
 import { useLoaderData } from "react-router-dom";
@@ -32,17 +31,19 @@ export default function Destination() {
     replaceBg("body-page_Bg--Destination");
   }, []);
 
-  const[destinationSelected, setDestinationSelected] = useState(dataPageDestination[0]);
-  const [isDestinationTabSelected, setIsDestinationTabSelected] = useState("moon");
+  const [destinationSelected, setDestinationSelected] = useState(
+    dataPageDestination[0]
+  );
+  const [isDestinationTabSelected, setIsDestinationTabSelected] =
+    useState("moon");
 
   return (
     <Section nameSection="Destination">
       <Header />
-      <SubheadingPage
-        number="01"
-        titlePage="Pick your destination"
-        classNameAdd="title-level5_Color title-level5_Mg--Pages"
-      />
+      <h5 className="section__Title-Level5-Destination section-title-level5_Mod--Text">
+        <span className="section-title-level5__Number-Page">01</span>Pick your
+        destination
+      </h5>
       <div className="section__Content-Destination">
         <picture className="section__Ilustration-Destination section__ilustration-destination_Size">
           <source

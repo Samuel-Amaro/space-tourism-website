@@ -1,7 +1,9 @@
 /*****MOBILE-FIRST******/
-/*.header_Mg{
-  margin: 0 0 48px 0;
-}*/
+
+.section__title-level5-home_Mod--Text {
+  margin: 0 0 16px 0;
+  text-align: center;
+}
 
 .section__Content-Home {
   margin: 48px 0 0 0;
@@ -68,12 +70,16 @@
 
 /*****BREAKPOINT 540px to TABLETS*****/
 @media screen and (min-width: 540px) {
+  .section__title-level5-home_Mod--Text {
+    margin: 0 0 24px 0;
+  }
   .section__Home {
     padding: 0 0 0 0;
   }
 
   .section__Content-Home {
-    margin: 106px 0 90px 0;
+    padding: 106px 0 90px 0;
+    margin: 0;
   }
 
   .section__title-level1-home_Mg {
