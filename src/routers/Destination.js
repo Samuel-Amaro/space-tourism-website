@@ -1,7 +1,6 @@
 import dataJson from "../api/data.json";
 import { useEffect, useState } from "react";
 import Section from "../components/Section";
-import LineDiviser from "../components/LineDiviser";
 import { useLoaderData } from "react-router-dom";
 import "./Destination.css";
 import replaceBg from "../utils/utils";
@@ -101,7 +100,6 @@ export default function Destination() {
           <p className="section__Description-Text-Destination section__description-text-destination_Mod">
             {destinationSelected.description}
           </p>
-          <LineDiviser />
           <div className="section__Statistics">
             <div className="section__Side-Statistics">
               <span className="section__Subheading-Level2-Destination section__subheading-level2-Destination_Mod--Dest">

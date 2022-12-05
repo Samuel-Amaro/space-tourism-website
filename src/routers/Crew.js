@@ -1,7 +1,6 @@
 import Section from "../components/Section";
 import dataJson from "../api/data.json";
 import { useLoaderData } from "react-router-dom";
-import LineDiviser from "../components/LineDiviser";
 import { useEffect ,useState } from "react";
 import replaceBg from "../utils/utils";
 import Header from "../components/Header";
@@ -55,7 +54,6 @@ export default function Crew() {
             aria-atomic="true"
           />
         </picture>
-        <LineDiviser />
         <ul
           className="section__List-Teams"
           aria-label="List of teams and crew"

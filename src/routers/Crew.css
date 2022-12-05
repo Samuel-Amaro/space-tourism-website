@@ -30,7 +30,8 @@
   background-color: var(--color-03);
 }
 
-.section__title-level3-crew_Mod--Text, .section__title-level4-crew_Mod--Text {
+.section__title-level3-crew_Mod--Text,
+.section__title-level4-crew_Mod--Text {
   text-transform: uppercase;
   text-align: center;
   color: var(--color-03);
@@ -42,14 +43,18 @@
   margin: 0 0 8px 0;
 }
 
-.section__title-level3-crew_Mod--Text{
-    margin: 0 0 16px;
+.section__title-level3-crew_Mod--Text {
+  margin: 0 0 16px;
 }
 
-.section__description-text-crew_Mod-Text{
-    text-align: center;
+.section__description-text-crew_Mod-Text {
+  text-align: center;
 }
 
-.section__Content-Crew{
-    padding: 0 0 56px 0;
+.section__Content-Crew {
+  padding: 0 0 56px 0;
+}
+
+.section__Ilustration-Crew{
+  border-bottom: 1px solid var(--color-05);
 }

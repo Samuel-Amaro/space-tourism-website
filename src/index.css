@@ -223,9 +223,15 @@ h5 {
     line-height: 150px;
   }
 
-  .section__Description-Text-Home {
+  .section__Description-Text-Home,
+  .section__Description-Text-Destination {
     font-size: 16px;
     line-height: 28px;
+  }
+
+  .section__Title-Level3-Destination {
+    font-size: 80px;
+    line-height: 92px;
   }
 }
 
