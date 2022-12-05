@@ -3,10 +3,16 @@ import logo from "../images/logo.svg";
 import { NavLink } from "react-router-dom";
 import iconMenu from "../images/icon-hamburger.svg";
 import iconClose from "../images/icon-close.svg";
-import {useState } from "react";
+import { useState } from "react";
 
 export default function Header(props) {
   const [navIsOpen, setNavIsOpen] = useState(false);
+  const routes = [
+    { route: "/home", text: "Home" },
+    { route: "/destination", text: "Destination" },
+    { route: "/crew", text: "Crew" },
+    { route: "/technology", text: "Technology" },
+  ];
   return (
     <header
       className={
@@ -79,50 +85,27 @@ export default function Header(props) {
           className="header__List-Links"
           aria-label="List from links navigation pages"
         >
-          <li className="header__Item-Link">
-            <NavLink
-              to="/home"
-              className="header__Link"
-              rel="next"
-              target="_self"
-              aria-label="Page Home"
-            >
-              <span className="header__Number-Page">00</span> Home
-            </NavLink>
-          </li>
-          <li className="header__Item-Link">
-            <NavLink
-              to="/destination"
-              className="header__Link"
-              rel="next"
-              target="_self"
-              aria-label="Page Destination"
-            >
-              <span className="header__Number-Page">01</span> Destination
-            </NavLink>
-          </li>
-          <li className="header__Item-Link">
-            <NavLink
-              to="/crew"
-              className="header__Link"
-              rel="next"
-              target="_self"
-              aria-label="Page Crew"
-            >
-              <span className="header__Number-Page">02</span> Crew
-            </NavLink>
-          </li>
-          <li className="header__Item-Link">
-            <NavLink
-              to="/technology"
-              className="header__Link"
-              rel="next"
-              target="_self"
-              aria-label="Page Technology"
-            >
-              <span className="header__Number-Page">03</span> Technology
-            </NavLink>
-          </li>
+          {routes.map((route, index) => {
+            return (
+              <li className="header__Item-Link" key={route.text}>
+                <NavLink
+                  to={route.route}
+                  className={({ isActive, isPending }) => {
+                    return isActive
+                      ? "header__Link header__link_Active"
+                      : isPending
+                      ? "header__Link"
+                      : "header__Link";
+                  }}
+                  rel="next"
+                  target="_self"
+                  aria-label={`Navigate to ${route.text} page`}
+                >
+                  <span className="header__Number-Page">{`${index}${index}`}</span>{route.text}
+                </NavLink>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>
