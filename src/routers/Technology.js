@@ -46,7 +46,7 @@ export default function Technology() {
             type="image/jpeg"
             srcSet={`${process.env.PUBLIC_URL}${selectedSpaceLaunch.images.landscape}`}
             className="section__Img-Technology section__ilustration-Technology_Size"
-            media="(max-width: 900px)"
+            media="(max-width: 930px)"
           />
           <img
             src={`${process.env.PUBLIC_URL}${selectedSpaceLaunch.images.portrait}`}

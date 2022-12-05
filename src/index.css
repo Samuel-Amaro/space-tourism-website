@@ -254,8 +254,9 @@ h5 {
   }
 }
 
-/******BREAKPOINT 768px****/
-@media screen and (min-width: 768px) {
+/******BREAKPOINT 930px to DESKTOP****/
+@media screen and (min-width: 930px) {
+  /*BACKGROUND IMAGES*/
   .body-page_Bg--Home {
     background-image: url("./images/home/background-home-desktop.jpg");
   }

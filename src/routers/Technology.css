@@ -107,4 +107,8 @@
   .section__Content-Technology {
     margin: 0 0 0px 0;
   }
+
+  .section__ilustration-Technology_Size{
+    width: 100%;
+  }
 }
