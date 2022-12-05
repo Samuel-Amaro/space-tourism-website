@@ -68,8 +68,8 @@
   text-align: center;
 }
 
-/*****BREAKPOINT 540px to TABLETS*****/
-@media screen and (min-width: 540px) {
+/*****BREAKPOINT 550px to TABLETS*****/
+@media screen and (min-width: 550px) {
   .section__title-level5-home_Mod--Text {
     margin: 0 0 24px 0;
   }

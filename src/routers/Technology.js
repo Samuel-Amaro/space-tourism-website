@@ -80,7 +80,7 @@ export default function Technology() {
           })}
         </ul>
         <div
-          className="section__Container-Description"
+          className="section__Container-Description-Technology"
           aria-live="polite"
           aria-atomic="true"
         >

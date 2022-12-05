@@ -59,8 +59,8 @@
   border-bottom: 1px solid var(--color-05);
 }
 
-/*****BREAKPOINT TO TABLETS 540px*****/
-@media screen and (min-width: 540px) {
+/*****BREAKPOINT TO TABLETS 550px*****/
+@media screen and (min-width: 550px) {
   .section__Crew {
     padding: 0;
   }

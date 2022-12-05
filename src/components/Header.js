@@ -101,7 +101,7 @@ export default function Header(props) {
                   target="_self"
                   aria-label={`Navigate to ${route.text} page`}
                 >
-                  <span className="header__Number-Page">{`${index}${index}`}</span>{route.text}
+                  <span className="header__Number-Page">{`${0}${index}`}</span>{route.text}
                 </NavLink>
               </li>
             );

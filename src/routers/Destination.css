@@ -81,8 +81,8 @@
   margin: 0 auto 26px auto;
 }
 
-/*****BREAKPOINT TO TABLETS 540px*****/
-@media screen and (min-width: 540px) {
+/*****BREAKPOINT TO TABLETS 550px*****/
+@media screen and (min-width: 550px) {
   .section__Destination {
     padding: 0 0 62px 0;
   }

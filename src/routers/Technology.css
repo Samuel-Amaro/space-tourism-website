@@ -31,34 +31,80 @@
   padding: 0 0 0 2px;
 }
 
-.section__button-space-launch_Active{
-    background-color: var(--color-03);
-    color: var(--color-01);
+.section__button-space-launch_Active {
+  background-color: var(--color-03);
+  color: var(--color-01);
 }
 
-.section__Button-Space-Launch:hover, 
-.section__Button-Space-Launch:focus{
-    border-color: var(--color-02);
+.section__Button-Space-Launch:hover,
+.section__Button-Space-Launch:focus {
+  border-color: var(--color-02);
 }
 
-.section__subheading-level2-technology_Mod--Text{
-    display: block;
-    text-align: center;
-    margin: 0 0 9px 0;
+.section__subheading-level2-technology_Mod--Text {
+  display: block;
+  text-align: center;
+  margin: 0 0 9px 0;
 }
 
-.section__title-level3-technology_Mod--Text{
-    text-align: center;
-    color: var(--color-03);
-    text-transform: uppercase;
+.section__title-level3-technology_Mod--Text {
+  text-align: center;
+  color: var(--color-03);
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+}
+
+.section__description-text-technology_Mod--Text {
+  text-align: center;
+  margin: 0 24px 0 24px;
+}
+
+.section__Content-Technology {
+  margin: 0 0 52px 0;
+}
+
+.section__Img-Technology:nth-child(1) {
+  display: none;
+}
+
+/*****BREAKPOINT TO TABLETS 550px*****/
+@media screen and (min-width: 550px) {
+  .section__Technology {
+    padding: 0 0 97px 0;
+  }
+
+  /*.section__ilustration-Technology_Size{
+    height: 310px;
+  }
+  */
+
+  .section__Ilustration-Technology {
+    margin: 0 0 56px 0;
+  }
+
+  .section__Button-Space-Launch {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 1.5px;
+    width: 58px;
+    height: 58px;
+  }
+
+  .section__Space-Launch {
+    margin: 0 0 44px 0;
+  }
+
+  .section__subheading-level2-technology_Mod--Text {
     margin: 0 0 16px 0;
-}
+  }
 
-.section__description-text-technology_Mod--Text{
+  .section__description-text-technology_Mod--Text {
     text-align: center;
-    margin: 0 24px 0 24px;
-}
+    margin: 0 auto;
+    max-width: 458px;
+  }
 
-.section__Content-Technology{
-    margin: 0 0 52px 0;
+  .section__Content-Technology {
+    margin: 0 0 0px 0;
+  }
 }

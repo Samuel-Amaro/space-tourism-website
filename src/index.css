@@ -184,8 +184,8 @@ h5 {
   background-image: url("./images/technology/background-technology-mobile.jpg");
 }
 
-/******BREAKPOINT 540px****/
-@media screen and (min-width: 540px) {
+/******BREAKPOINT 550px****/
+@media screen and (min-width: 550px) {
   /*****BACKGROUND-IMAGENS TO TABLETS*****/
   .body-page_Bg--Home {
     background-image: url("./images/home/background-home-tablet.jpg");
@@ -225,7 +225,8 @@ h5 {
 
   .section__Description-Text-Home,
   .section__Description-Text-Destination,
-  .section__Description-Text-Crew {
+  .section__Description-Text-Crew,
+  .section__Description-Text-Technology {
     font-size: 16px;
     line-height: 28px;
   }
@@ -235,7 +236,8 @@ h5 {
     line-height: 92px;
   }
 
-  .section__Title-Level3-Crew {
+  .section__Title-Level3-Crew, 
+  .section__Title-Level3-Technology {
     font-size: 40px;
     line-height: 46px;
   }
@@ -243,6 +245,12 @@ h5 {
   .section__Title-Level4-Crew {
     font-size: 24px;
     line-height: 28px;
+  }
+
+  .section__Subheading-Level2-Technology {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
   }
 }
 
