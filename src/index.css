@@ -236,7 +236,7 @@ h5 {
     line-height: 92px;
   }
 
-  .section__Title-Level3-Crew, 
+  .section__Title-Level3-Crew,
   .section__Title-Level3-Technology {
     font-size: 40px;
     line-height: 46px;
@@ -254,8 +254,8 @@ h5 {
   }
 }
 
-/******BREAKPOINT 930px to DESKTOP****/
-@media screen and (min-width: 930px) {
+/******BREAKPOINT 960px to DESKTOP****/
+@media screen and (min-width: 960px) {
   /*BACKGROUND IMAGES*/
   .body-page_Bg--Home {
     background-image: url("./images/home/background-home-desktop.jpg");
@@ -271,5 +271,22 @@ h5 {
 
   .body-page_Bg--Technology {
     background-image: url("./images/technology/background-technology-desktop.jpg");
+  }
+
+  /**TEXTS AND TITLES**/
+  .section__Title-Level5-Home {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+  }
+
+  .section__Title-Level1-Home {
+    line-height: 172px;
+    text-align: left;
+  }
+
+  .section__Description-Text-Home {
+    font-size: 18px;
+    line-height: 32px;
   }
 }
