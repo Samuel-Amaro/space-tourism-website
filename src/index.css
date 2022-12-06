@@ -276,7 +276,8 @@ h5 {
 
   /**TEXTS AND TITLES**/
   .section__Title-Level5-Home,
-  .section__Title-Level5-Destination {
+  .section__Title-Level5-Destination,
+  .section__Title-Level5-Crew {
     font-size: 28px;
     line-height: 34px;
     letter-spacing: 4.725px;
@@ -298,8 +299,19 @@ h5 {
   }
 
   .section__Description-Text-Home,
-  .section__Description-Text-Destination {
+  .section__Description-Text-Destination,
+  .section__Description-Text-Crew {
     font-size: 18px;
     line-height: 32px;
+  }
+
+  .section__Title-Level4-Crew {
+    font-size: 32px;
+    line-height: 37px;
+  }
+
+  .section__Title-Level3-Crew{
+    font-size: 56px;
+    line-height: 64px;
   }
 }

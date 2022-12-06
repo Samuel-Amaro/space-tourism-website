@@ -35,11 +35,11 @@ export default function Crew() {
   return (
     <Section nameSection="Crew">
       <Header />
-      <h5 className="section__Title-Level5-Crew section-title-level5_Mod--Text">
-        <span className="section-title-level5__Number-Page">02</span>Meet your
-        crew
-      </h5>
       <div className="section__Content-Crew">
+        <h5 className="section__Title-Level5-Crew section-title-level5_Mod--Text-Crew">
+          <span className="section-title-level5__Number-Page">02</span>Meet your
+          crew
+        </h5>
         <picture className="section__Ilustration-Crew">
           <source
             type="image/webp"
@@ -88,7 +88,7 @@ export default function Crew() {
           })}
         </ul>
         <div
-          className="section__Container-Description"
+          className="section__Container-Description-Crew"
           aria-live="polite"
           aria-atomic="true"
         >

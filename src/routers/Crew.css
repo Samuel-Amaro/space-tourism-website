@@ -52,17 +52,26 @@
 }
 
 .section__Content-Crew {
-  padding: 0 0 56px 0;
+  padding: 24px 0 56px 0;
 }
 
 .section__Ilustration-Crew {
   border-bottom: 1px solid var(--color-05);
 }
 
+.section-title-level5_Mod--Text-Crew {
+  margin: 0 0 32px 0;
+}
+
 /*****BREAKPOINT TO TABLETS 550px*****/
 @media screen and (min-width: 550px) {
   .section__Crew {
     padding: 0;
+  }
+
+  .section-title-level5_Mod--Text-Crew {
+    margin: 0 0 60px 39px;
+    grid-area: d;
   }
 
   .section__List-Teams {
@@ -75,7 +84,7 @@
     border-bottom: none;
   }
 
-  .section__Container-Description {
+  .section__Container-Description-Crew {
     grid-area: a;
     margin: 0 0 40px 0;
   }
@@ -83,10 +92,11 @@
   .section__Content-Crew {
     display: grid;
     grid-template-areas:
+      "d"
       "a"
       "b"
       "c";
-    padding: 0 0 0 0;
+    padding: 40px 0 0 0;
   }
 
   .section__description-text-crew_Mod-Text {
@@ -98,5 +108,73 @@
     margin: 0 auto;
     width: auto;
     height: 533px;
+  }
+}
+
+/*****BREAKPOINT TO DESKTOP 960px*****/
+@media screen and (min-width: 960px) {
+  .section__Crew {
+    padding: 40px 0 0 0;
+  }
+
+  .section-title-level5_Mod--Text-Crew {
+    margin: 0 0 154px 0px;
+  }
+
+  .section__Content-Crew {
+    display: grid;
+    grid-template-areas:
+      "d c"
+      "a c"
+      "b c";
+    grid-template-columns: minmax(min-content, 614px) minmax(min-content, 516px);
+    padding: 62px 50px 0 50px;
+    justify-content: center;
+    align-items: flex-end;
+    column-gap: 81px;
+  }
+
+  .section__title-level4-crew_Mod--Text {
+    margin: 0 0 15px 0;
+    text-align: left;
+  }
+
+  .section__title-level3-crew_Mod--Text {
+    margin: 0 0 27px;
+    text-align: left;
+  }
+
+  .section__description-text-crew_Mod-Text {
+    max-width: none;
+    margin: 0 0;
+    text-align: left;
+  }
+
+  .section__Container-Description-Crew {
+    margin: 0 0 120px 0;
+  }
+
+  .section__List-Teams {
+    margin: 0 0 94px 0;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  .section__Input-Crew {
+    width: 15px;
+    height: 15px;
+  }
+
+  .section__ilustration-Crew_Size {
+    margin: 0 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/******BREAKPOINT 1200px TO DESKTOP****/
+@media screen and (min-width: 1400px) {
+  .section__Content-Crew {
+    padding: 62px 0 0 0px;
   }
 }
