@@ -81,6 +81,7 @@ h5 {
 .section-title-level5_Mod--Text {
   margin: 24px 0 32px 0;
   text-align: center;
+  color: var(--color-03);
 }
 
 .section__Subheading-Level1-Destination {
@@ -274,10 +275,21 @@ h5 {
   }
 
   /**TEXTS AND TITLES**/
-  .section__Title-Level5-Home {
+  .section__Title-Level5-Home,
+  .section__Title-Level5-Destination {
     font-size: 28px;
     line-height: 34px;
     letter-spacing: 4.725px;
+  }
+
+  .section__Title-Level3-Destination {
+    font-size: 100px;
+    line-height: 115px;
+  }
+
+  .section-title-level5_Mod--Text {
+    margin: 76px 0 64px 166.5px;
+    text-align: left;
   }
 
   .section__Title-Level1-Home {
@@ -285,7 +297,8 @@ h5 {
     text-align: left;
   }
 
-  .section__Description-Text-Home {
+  .section__Description-Text-Home,
+  .section__Description-Text-Destination {
     font-size: 18px;
     line-height: 32px;
   }

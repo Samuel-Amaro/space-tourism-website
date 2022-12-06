@@ -90,7 +90,7 @@ export default function Destination() {
           })}
         </ul>
         <div
-          className="section__Container-Description"
+          className="section__Container-Description-Destination"
           aria-live="polite"
           aria-atomic="true"
         >
