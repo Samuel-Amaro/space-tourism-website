@@ -70,6 +70,10 @@ export default function Technology() {
                   aria-label={`Space Launch ${data.name}`}
                   title={`Space Launch ${data.name}`}
                   onPointerDown={handlerSpaceLaunch}
+                  onKeyDown={(event) => {
+                    if(event.key === "Enter")
+                      handlerSpaceLaunch(event);
+                  }}
                   data-name-space-launch={data.name}
                 >
                   {index + 1}
