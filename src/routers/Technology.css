@@ -63,9 +63,9 @@
   margin: 0 0 52px 0;
 }
 
-.section__Img-Technology:nth-child(1) {
+/*.section__Img-Technology:nth-child(1) {
   display: none;
-}
+}*/
 
 /*****BREAKPOINT TO TABLETS 550px*****/
 @media screen and (min-width: 550px) {
@@ -108,7 +108,88 @@
     margin: 0 0 0px 0;
   }
 
-  .section__ilustration-Technology_Size{
+  .section__ilustration-Technology_Size {
     width: 100%;
+  }
+}
+
+/*****BREAKPOINT 960px TO DESKTOP*****/
+@media screen and (min-width: 960px) {
+  .section__Technology {
+    padding: 40px 0 101px 0;
+  }
+
+  .section-title-level5_Mod--Text {
+    margin-bottom: 26px;
+  }
+
+  .section__Button-Space-Launch {
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 2px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .section__Space-Launch {
+    margin: 0;
+    grid-area: a;
+    /*flex-flow: column nowrap;*/
+    gap: 32px;
+  }
+
+  .section__Container-Description-Technology {
+    grid-area: b;
+  }
+
+  .section__Ilustration-Technology {
+    margin: 0 0 0 0;
+    grid-area: c;
+  }
+
+  .section__subheading-level2-technology_Mod--Text {
+    text-align: left;
+    margin: 0 0 11px 0;
+  }
+
+  .section__title-level3-technology_Mod--Text {
+    text-align: left;
+    margin: 0 0 17px 0;
+  }
+
+  .section__description-text-technology_Mod--Text {
+    text-align: left;
+    margin: 0 0;
+    max-width: 444px;
+  }
+
+  .section__Content-Technology {
+    display: grid;
+    grid-template-areas:
+      "a a"
+      "b c";
+    grid-template-columns: minmax(min-content, 470px) minmax(min-content, 515px);
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    padding: 0 20px;
+  }
+}
+
+/*****BREAKPOINT 1200px to DESKTOP*****/
+@media screen and (min-width: 1250px) {
+  .section__Space-Launch {
+    margin: 0;
+    grid-area: a;
+    flex-flow: column nowrap;
+    gap: 32px;
+  }
+
+  .section__Content-Technology {
+    grid-template-areas:
+      "a b c";
+    grid-template-columns: minmax(min-content, 80px) minmax(min-content, 470px) minmax(min-content, 515px);
+    gap: 80px;
+    padding: 0px;
   }
 }

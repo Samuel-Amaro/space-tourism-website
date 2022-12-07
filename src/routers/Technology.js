@@ -44,19 +44,18 @@ export default function Technology() {
         <picture className="section__Ilustration-Technology">
           <source
             type="image/jpeg"
-            srcSet={`${process.env.PUBLIC_URL}${selectedSpaceLaunch.images.landscape}`}
+            srcSet={`${process.env.PUBLIC_URL}${selectedSpaceLaunch.images.portrait}`}
             className="section__Img-Technology section__ilustration-Technology_Size"
-            media="(max-width: 930px)"
+            media="(min-width: 960px)"
           />
           <img
-            src={`${process.env.PUBLIC_URL}${selectedSpaceLaunch.images.portrait}`}
+            src={`${process.env.PUBLIC_URL}${selectedSpaceLaunch.images.landscape}`}
             alt={selectedSpaceLaunch.description}
             className="section__Img-Technology section__ilustration-Technology_Size"
             aria-live="polite"
             aria-atomic="true"
           />
         </picture>
-        {/*TODO: pensar em uma forma de fazer o elemento escolhido se tornar ativo*/}
         <ul className="section__Space-Launch" aria-label="Choose Space Launch">
           {dataTechnology.map((data, index) => {
             return (
