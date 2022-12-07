@@ -60,7 +60,6 @@ export default function Crew() {
           title="Pick your crew"
         >
           {dataPageCrew.map((data, index) => {
-            /*TODO: pensar em uma forma de fazer o elemento escolhido se tornar ativo*/
             return (
               <li
                 className="section__Item-Crew"
