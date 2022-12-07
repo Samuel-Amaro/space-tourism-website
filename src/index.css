@@ -185,6 +185,10 @@ h5 {
   background-image: url("./images/technology/background-technology-mobile.jpg");
 }
 
+.body-page_Bg--Error{
+  background-image: url("./images/error/space-bg-mediun.jpg");
+}
+
 /******BREAKPOINT 550px****/
 @media screen and (min-width: 550px) {
   /*****BACKGROUND-IMAGENS TO TABLETS*****/

@@ -7,12 +7,14 @@ import Destination, {loader as loaderDestination} from "./routers/Destination";
 import Crew, { loader as loaderCrew } from "./routers/Crew";
 import Technology, {loader as loaderTech} from "./routers/Technology";
 import Root from "./routers/Root";
+import ErrorPage from "./routers/ErrorPage";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
