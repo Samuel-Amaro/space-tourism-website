@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createHashRouter, RouterProvider} from "react-router-dom";
 import Home from "./routers/Home";
 import Destination, {loader as loaderDestination} from "./routers/Destination";
 import Crew, { loader as loaderCrew } from "./routers/Crew";
@@ -9,8 +9,8 @@ import Technology, {loader as loaderTech} from "./routers/Technology";
 import Root from "./routers/Root";
 import ErrorPage from "./routers/ErrorPage";
 
-
-const router = createBrowserRouter([
+/*Obs: deployment in gitHub pages não pode usar createBrowserRouter -> createBrowserRouter([]), temos que usar createHashRouter createBrowserRouter([])*/
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
