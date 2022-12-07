@@ -127,8 +127,8 @@
       "d c"
       "a c"
       "b c";
-    grid-template-columns: minmax(min-content, 614px) minmax(min-content, 516px);
-    padding: 62px 50px 0 50px;
+    grid-template-columns: minmax(min-content, 488px) minmax(min-content, 516px);
+    padding: 62px 20px 0 20px;
     justify-content: center;
     align-items: flex-end;
     column-gap: 81px;
@@ -145,7 +145,7 @@
   }
 
   .section__description-text-crew_Mod-Text {
-    max-width: none;
+    max-width: 444px;
     margin: 0 0;
     text-align: left;
   }
@@ -173,7 +173,7 @@
 }
 
 /******BREAKPOINT 1200px TO DESKTOP****/
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
   .section__Content-Crew {
     padding: 62px 0 0 0px;
   }
