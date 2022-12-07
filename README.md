@@ -42,8 +42,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Repository Project](https://your-solution-url.com)
-- Live Site URL: [Live Result](https://your-live-site-url.com)
+- Solution URL: [Repository Project](https://github.com/Samuel-Amaro/space-tourism-website)
+- Live Site URL: [Live Result](https://samuel-amaro.github.io/space-tourism-website/)
 
 ## My process
 
